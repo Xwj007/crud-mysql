@@ -7,9 +7,8 @@ var connection = mysql.createConnection({
 	database : 'students'
 });
  
-console.log(12333)
 connection.connect(mysql);
-console.log(12333)
+
 // 查询所有
 exports.find = function(callback){
 	connection.query('SELECT * FROM `stu`',function (err,results,fields) {

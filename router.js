@@ -1,7 +1,6 @@
 var express = require('express') // Express 提供了一种更好的方式 专门用来包装路由的
 var db = require('./student-mysql')
 
-
 var router = express.Router() // 1. 创建一个路由容器
 
 // 2. 把路由都挂载到 router 路由容器中
@@ -9,7 +8,6 @@ var router = express.Router() // 1. 创建一个路由容器
 渲染学生列表页面
 */
 router.get('/',function (req,res) {
-	console.log(db)
 	db.find(function (err,results) {
 		if (err) {
 			return res.status(500).send('Server error...')
